@@ -15,4 +15,5 @@ public interface CountryRepository extends JpaRepository<CountryEntity, Long> {
 
     @Query(nativeQuery = true,value = "update countries s set is_active =false where s.id =:id")
     CountryResponse isActive(Long id);
+
 }

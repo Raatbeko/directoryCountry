@@ -4,15 +4,18 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.jackson.Jacksonized;
 
-import java.util.List;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
+@Jacksonized //missing
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ReportEndpointResponse {
-    Long count;
+public class EndpointResponse {
 
-    List<EndpointResponse> endpointResponses;
+    String endpoint;
+
+    LocalDateTime requestTime;
 }
