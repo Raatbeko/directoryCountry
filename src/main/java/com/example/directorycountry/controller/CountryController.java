@@ -33,7 +33,7 @@ public class CountryController {
     final EndpointLogService endpointLogService;
 
     @PostMapping("/add")
-    public CountryResponse save(CountryRequest countryRequest) {
+    public CountryResponse save(@RequestBody CountryRequest countryRequest) {
         return countryService.save(countryRequest);
     }
 
@@ -63,7 +63,7 @@ public class CountryController {
     }
 
     @GetMapping("/add-photo")
-    public FileResponse saveFile(FileRequest fileRequest) {
+    public FileResponse saveFile(@RequestBody FileRequest fileRequest) {
         return fileCountryService.save(fileRequest);
     }
 

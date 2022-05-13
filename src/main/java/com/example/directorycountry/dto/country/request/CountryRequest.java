@@ -11,10 +11,8 @@ import javax.validation.constraints.NotNull;
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CountryRequest {
-    @NotNull
     String countryName;
 
-    @NotNull
     String alphaCode;
 
 }
