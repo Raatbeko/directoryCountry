@@ -60,6 +60,7 @@ public class CountryServiceImpl implements CountryService {
                         .id(countryEntities1.getId())
                         .countryName(countryEntities1.getName())
                         .alphaCode(countryEntities1.getAlphaCode())
+                        .fileResponse(fileCountryService.getByCountryId(countryEntities1.getId()))
                         .build()).collect(Collectors.toList());
     }
 
@@ -72,6 +73,7 @@ public class CountryServiceImpl implements CountryService {
                 .alphaCode(countryEntity.getAlphaCode())
                 .countryName(countryEntity.getName())
                 .id(countryEntity.getId())
+                .fileResponse(fileCountryService.getByCountryId(countryEntity.getId()))
                 .build();
     }
 
@@ -95,6 +97,7 @@ public class CountryServiceImpl implements CountryService {
                     .id(countryEntity.getId())
                     .countryName(countryEntity.getName())
                     .alphaCode(countryEntity.getAlphaCode())
+                    .fileResponse(fileCountryService.getByCountryId(countryEntity.getId()))
                     .build();
         }else if (countryEntity1 != null){
             return CountryResponse
@@ -102,6 +105,7 @@ public class CountryServiceImpl implements CountryService {
                     .id(countryEntity1.getId())
                     .countryName(countryEntity1.getName())
                     .alphaCode(countryEntity1.getAlphaCode())
+                    .fileResponse(fileCountryService.getByCountryId(countryEntity1.getId()))
                     .build();
         }
         return null;
